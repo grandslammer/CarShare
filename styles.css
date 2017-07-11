@@ -21,3 +21,11 @@ body {
 .modal-dialog {
     width: 1000px;
 }
+
+#submit {
+    margin-bottom: 20px;
+}
+
+footer {
+    color: white;
+}
