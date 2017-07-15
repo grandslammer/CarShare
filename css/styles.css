@@ -1,19 +1,22 @@
 body {
     padding-top: 70px;
-    background: #ffffff;
+    background: #494949;
 }
 
-.thumbnail img {
-    height: 200px;
-    width: 100%;
+.navbar {
+    background: #FF3C38;
 }
 
-#mainlogo {
-    background-image: url("../img/CarShare%20Logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+#navbar-brand {
+    color: #153243;
 }
 
+.nav.navbar-nav li a {
+    color: #153243;
+}
+
+
+/* To be fixed */
 .wrapper {
     background-color: white;
 }
