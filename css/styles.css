@@ -1,6 +1,6 @@
 body {
     padding-top: 70px;
-    background: #494949;
+    background: #ffffff;
 }
 
 .navbar {
@@ -9,6 +9,18 @@ body {
 
 #navbar-brand {
     color: #153243;
+}
+
+.jumbotron.logo {
+    background-color: #ffffff;
+}
+
+.jumbotron.bluebackground {
+    background-color: #153243;
+}
+
+.jumbotron {
+    color: #FF3C38;
 }
 
 .nav.navbar-nav li a {
