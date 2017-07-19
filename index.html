@@ -41,12 +41,11 @@
             <img src="img/logo.png">
         </div>
 
-
         <div class="jumbotron bluebackground" id="about">
-            <h1><i class="fa fa-building" aria-hidden="true"></i> About</h1>
+            <h1><i class="fa fa-thumbs-up" aria-hidden="true"></i> About</h1>
         </div>
 
-        <hr class="featurette-divider">
+
 
         <div class="featurette" id="aboutfeaturette">
             <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
@@ -71,7 +70,7 @@
 
 
         <div class="featurette" id="contactfeaturette">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500" id="bottomcirclepic">
             <h2 class="featurette-heading">Number Three Rounded Image
                 <span class="text-muted">Optional text</span>
             </h2>
@@ -89,7 +88,7 @@
             <div class="col-md-12">
                 <div class="well">
                     <form action="#">
-                        <div class="input-group">
+                        <div class="input-group col-xs-offset-4">
                             <input class="btn btn-lg" name="signupemail" id="signupemail" type="email" placeholder="Your Email" required>
                             <button class="btn btn-info btn-lg" type="submit">Submit</button>
                         </div>
@@ -102,11 +101,13 @@
             <h1><i class="fa fa-address-book" aria-hidden="true"></i> Contact</h1>
         </div>
 
-        <p>Feel free to contact me if you have any questions or if you want to order a photograph.</p>
-        <p>N'hesitez pas a me contacter si vous avez des questions ou si vous voulez placer une commander pour des photos.</p>
+        <p>You may contact us by completing this form.</p>
 
 
-        <form method="post">
+        <!--For form javascript validation-->
+        <div id="error"></div>
+
+        <form method="get">
             <div class="form-group">
                 <label for="usr">Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
@@ -131,8 +132,11 @@
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
+    <!--Form validation using javascript-->
     <script type="text/javascript">
         $("form").submit(function(e) {
+            e.preventDefault();
 
             var error = "";
 
@@ -150,16 +154,13 @@
 
             if (error != "") {
                 $("#error").html('<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
-
-                return false;
-
             } else {
-
-                return true;
-
+                $("form").unbind("submit").submit();
             }
         });
+
     </script>
+
 </body>
 
 </html>

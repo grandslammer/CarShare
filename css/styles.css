@@ -4,15 +4,16 @@ body {
 }
 
 .navbar {
-    background: #FF3C38;
+    background: #153243;
 }
 
 #navbar-brand {
-    color: #153243;
+    color: #FF3C38;
 }
 
 .jumbotron.logo {
     background-color: #ffffff;
+    margin: auto;
 }
 
 .jumbotron.bluebackground {
@@ -24,15 +25,12 @@ body {
 }
 
 .nav.navbar-nav li a {
-    color: #153243;
+    color: #FF3C38;
 }
 
-
-/* To be fixed */
 .wrapper {
     background-color: white;
 }
-
 
 #submit {
     margin-bottom: 20px;
@@ -58,6 +56,10 @@ body {
     font-size: 50px;
 }
 
+#bottomcirclepic {
+    margin-bottom: 20px;
+}
+
 footer {
     margin: 50px 0;
 }
@@ -66,23 +68,18 @@ footer {
     .headline h1 {
         font-size: 140px;
     }
-
     .headline h2 {
         font-size: 63px;
     }
-
     .featurette-divider {
         margin: 50px 0;
     }
-
     .featurette-image.pull-left {
         margin-right: 20px;
     }
-
     .featurette-image.pull-right {
         margin-left: 20px;
     }
-
     .featurette-heading {
         font-size: 35px;
     }
@@ -92,27 +89,21 @@ footer {
     .headline h1 {
         font-size: 105px;
     }
-
     .headline h2 {
         font-size: 50px;
     }
-
     .featurette-divider {
         margin: 40px 0;
     }
-
     .featurette-image {
         max-width: 50%;
     }
-
     .featurette-image.pull-left {
         margin-right: 10px;
     }
-
     .featurette-image.pull-right {
         margin-left: 10px;
     }
-
     .featurette-heading {
         font-size: 30px;
     }
@@ -122,11 +113,9 @@ footer {
     .container {
         margin: 0 15px;
     }
-
     .featurette-divider {
         margin: 40px 0;
     }
-
     .featurette-heading {
         font-size: 25px;
     }
@@ -136,11 +125,9 @@ footer {
     .headline h1 {
         font-size: 70px;
     }
-
     .headline h2 {
         font-size: 32px;
     }
-
     .featurette-divider {
         margin: 30px 0;
     }
@@ -150,11 +137,9 @@ footer {
     .headline {
         padding: 75px 0 25px 0;
     }
-
     .headline h1 {
         font-size: 60px;
     }
-
     .headline h2 {
         font-size: 30px;
     }
@@ -164,16 +149,13 @@ footer {
     .featurette-divider {
         margin: 10px 0;
     }
-
     .featurette-image {
         max-width: 100%;
     }
-
     .featurette-image.pull-left {
         margin-right: 0;
         margin-bottom: 10px;
     }
-
     .featurette-image.pull-right {
         margin-bottom: 10px;
         margin-left: 0;
