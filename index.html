@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"><i class="fa fa-picture-o" aria-hidden="true"></i> CarShare</a>
+                <a href="#" class="navbar-brand" id="navbar-brand">CarShare</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -33,20 +33,54 @@
         </div>
     </nav>
 
-    <div class="jumbotron" id="mainlogo">
 
-    </div>
 
     <div class="container wrapper">
 
+        <div class="jumbotron logo" id="mainlogo">
+            <img src="img/logo.png">
+        </div>
 
-        <div class="jumbotron" id="about">
-            <h1><i class="fa fa-building" aria-hidden="true"></i> About</h1>
+        <div class="jumbotron bluebackground" id="about">
+            <h1><i class="fa fa-thumbs-up" aria-hidden="true"></i> About</h1>
         </div>
 
 
 
-        <div class="jumbotron" id="signup">
+        <div class="featurette" id="aboutfeaturette">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+            <h2 class="featurette-heading">Number One Rounded Image
+                <span class="text-muted">Optional text</span>
+            </h2>
+            <p class="lead">Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text -</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
+            <h2 class="featurette-heading">Number Two Rounded Image
+                <span class="text-muted">Optional text</span>
+            </h2>
+            <p class="lead">Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text -</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="featurette" id="contactfeaturette">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500" id="bottomcirclepic">
+            <h2 class="featurette-heading">Number Three Rounded Image
+                <span class="text-muted">Optional text</span>
+            </h2>
+            <p class="lead">Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text - Random text -</p>
+
+        </div>
+
+
+
+        <div class="jumbotron bluebackground" id="signup">
             <h1><i class="fa fa-address-card" aria-hidden="true"></i> Sign Up</h1>
         </div>
 
@@ -54,7 +88,7 @@
             <div class="col-md-12">
                 <div class="well">
                     <form action="#">
-                        <div class="input-group">
+                        <div class="input-group col-xs-offset-4">
                             <input class="btn btn-lg" name="signupemail" id="signupemail" type="email" placeholder="Your Email" required>
                             <button class="btn btn-info btn-lg" type="submit">Submit</button>
                         </div>
@@ -63,13 +97,15 @@
             </div>
         </div>
 
-        <div class="jumbotron" id="contact">
+        <div class="jumbotron bluebackground" id="contact">
             <h1><i class="fa fa-address-book" aria-hidden="true"></i> Contact</h1>
         </div>
 
-        <p>Feel free to contact me if you have any questions or if you want to order a photograph.</p>
-        <p>N'hesitez pas a me contacter si vous avez des questions ou si vous voulez placer une commander pour des photos.</p>
+        <p>You may contact us by completing this form.</p>
 
+
+        <!--For form javascript validation-->
+        <div id="error"></div>
 
         <form method="post">
             <div class="form-group">
@@ -96,8 +132,11 @@
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
+    <!--Form validation using javascript-->
     <script type="text/javascript">
         $("form").submit(function(e) {
+            e.preventDefault();
 
             var error = "";
 
@@ -115,16 +154,13 @@
 
             if (error != "") {
                 $("#error").html('<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
-
-                return false;
-
             } else {
-
-                return true;
-
+                $("form").unbind("submit").submit();
             }
         });
+
     </script>
+
 </body>
 
 </html>
