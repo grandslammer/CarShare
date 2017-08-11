@@ -56,12 +56,15 @@ body {
     font-size: 50px;
 }
 
-#bottomcirclepic {
-    margin-bottom: 20px;
+#contactfeaturette {
+    margin-bottom: 50px;
 }
 
-footer {
-    margin: 50px 0;
+footer{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1000px;
 }
 
 @media(max-width:1200px) {
